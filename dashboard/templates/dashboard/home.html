@@ -1,0 +1,81 @@
+{% extends 'dashboard/base.html' %} {% block content %}
+<br />
+<br />
+<div class="row px-4">
+  {% include 'dashboard/status.html' %}
+  <div class="col-md-4 homeBox">
+    <h5>Customers:</h5>
+    <hr />
+    <div class="card card-body">
+      <a
+        href="createCustomer/"
+        class="btn-sm btn-block btn btn-primary createCustomer"
+        >Create Customer</a
+      >
+      <table class="table table-sm">
+        <tr>
+          <th></th>
+          <th>Customer</th>
+          <th>Phone</th>
+        </tr>
+
+        {% for customer in customer %}
+        <tr>
+          <td>
+            <a
+              href="{% url 'customer' customer.id %}"
+              class="btn btn-sm btn-info"
+              >View</a
+            >
+          </td>
+          <td>{{customer.name}}</td>
+          <td>{{customer.phone}}</td>
+        </tr>
+        {% endfor %}
+      </table>
+    </div>
+  </div>
+  <div class="col-md-8 homeBox">
+    <h5>Last 5 orders:</h5>
+    <hr />
+    <div class="card card-body">
+      <div class="table-responsive-xl">
+        <table class="table table-xl">
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Date Order</th>
+              <th>Status</th>
+              <th>Update</th>
+              <th>Remove</th>
+            </tr>
+
+            {% for order in orders %}
+            <tr>
+              <td>{{order.Product}}</td>
+              <td>{{order.date_created}}</td>
+              <td>{{order.status}}</td>
+              <td>
+                <a
+                  href="{% url 'updateOrder' order.id %}"
+                  class="btn btn-sm btn-info"
+                  >Update</a
+                >
+              </td>
+              <td>
+                <a
+                  href="{% url 'deleteOrder' order.id %}"
+                  class="btn btn-sm btn-danger"
+                  >Delete</a
+                >
+              </td>
+            </tr>
+            {% endfor %}
+          </thead>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

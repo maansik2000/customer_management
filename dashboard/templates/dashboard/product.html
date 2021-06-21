@@ -1,0 +1,38 @@
+{% extends 'dashboard/base.html' %} {% block content %}
+
+<br />
+
+<div class="row px-4">
+  <div class="col-md">
+    <div class="card card-body my-2">
+      <h5>Products</h5>
+    </div>
+
+    <div class="card card-body">
+      <div class="table-responsive-xl">
+        <table class="table table-xl">
+          <thead>
+            <tr>
+              <th>Image</th>
+              <th>Product</th>
+              <th>Category</th>
+              <th>Price</th>
+            </tr>
+            {% for product in product %}
+            <tr>
+              <td>
+                <img src="{{product.imageUrl}}" alt="product Img" width="70" />
+              </td>
+              <td>{{product.name}}</td>
+              <td>{{product.category}}</td>
+              <td>{{product.price}}</td>
+            </tr>
+            {% endfor %}
+          </thead>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

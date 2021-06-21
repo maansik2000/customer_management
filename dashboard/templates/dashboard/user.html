@@ -1,0 +1,45 @@
+{% extends 'dashboard/base.html' %} {% block content %} 
+<br />
+{% include 'dashboard/status.html' %}
+
+
+<div class="row px-4">
+  <div class="col-md mb-4">
+    <div class="card card-body">
+      <h5>Customer</h5>
+      <hr />
+    </div>
+  </div>
+</div>
+
+<br />
+<div class="row px-4">
+  <div class="col">
+    <div class="card card-body">
+      <div class="table-responsive-xl">
+        <table class="table table-xl">
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Category</th>
+              <th>Date</th>
+              <th>Status</th>
+
+            </tr>
+
+            {% for order in orders %}
+            <tr>
+              <td>{{order.Product}}</td>
+              <td>{{order.Product.category}}</td>
+              <td>{{order.Product.date_created}}</td>
+              <td>{{order.status}}</td>
+            </tr>
+            {% endfor %}
+          </thead>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

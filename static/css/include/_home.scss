@@ -1,0 +1,74 @@
+.card.card-body {
+  background-color: white;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.568),
+    rgba(255, 255, 255, 0.3)
+  );
+  border: 1px solid
+    linear-gradient(
+      to right bottom,
+      rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0.3)
+    );
+  backdrop-filter: blur(5rem);
+  border-radius: 14px;
+}
+
+.createCustomer {
+  padding: 12px;
+  margin: 16px 0;
+}
+
+table tr th {
+  font-weight: 600;
+}
+
+#total-orders {
+  background-color: #58b1e8d7;
+}
+
+#orders-delivered {
+  background-color: #5c90f2be;
+}
+
+#orders-pending {
+  background-color: #5f69dbb2;
+}
+.footer {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.863),
+    rgba(255, 255, 255, 0.774)
+  );
+  color: white;
+  text-align: center;
+  color: black;
+}
+
+.homeBox {
+  margin-bottom: 50px;
+}
+
+.statusBox {
+  margin-bottom: 30px;
+}
+
+.customerUpdate {
+  margin-bottom: 18px;
+  padding: 14px;
+  margin-top: 10px;
+}
+
+.customerInfo {
+  p{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

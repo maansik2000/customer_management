@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Courgette&family=Poppins:wght@400;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #fde7f9;
+  background-image: linear-gradient(315deg, #ebe7fd 0%, #aacaef 74%);
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li a {
+  color: rgb(8, 75, 129);
+  &:hover {
+    color: rgb(52, 106, 177);
+  }
+}
+
+.nav_bar {
+  overflow-x: hidden;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 200px;
+  background-color: white;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.4)
+  );
+  height: 100%;
+  border: 5px solid
+    linear-gradient(
+      to right bottom,
+      rgba(212, 212, 212, 0.7),
+      rgba(255, 255, 255, 0.3)
+    );
+  backdrop-filter: blur(2rem);
+  transition: all 0.5s ease;
+  z-index: 300;
+  // box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.mainSection {
+  margin-left: 190px;
+}
+
+.navlinks {
+  display: flex;
+  height: 60%;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 30px;
+
+  span {
+    font-size: 12px;
+    letter-spacing: 0.1rem;
+    margin: 0;
+  }
+  margin-top: 10px;
+}
+
+.navlinks li a {
+  display: block;
+  span {
+    margin-right: 8px;
+    font-size: 18px;
+  }
+}
+
+.logo {
+  padding: 30px;
+  a {
+    h1 {
+      font-family: "Courgette", cursive;
+      color: rgb(63, 87, 124);
+      font-weight: bold;
+    }
+  }
+}
+
+.burger {
+  display: none;
+  float: right;
+}
+
+.closebtn {
+  display: none;
+  float: right;
+  margin-right: 20px;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+@import "./include/mediaQueries";
+@import "./include/home";
